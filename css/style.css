@@ -1,0 +1,546 @@
+:root{
+    --pri-color: #01384e;
+    --border: 1px solid #363636;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+section{
+    padding: 4rem 0;
+    overflow: hidden;
+}
+
+.w-50{
+    width: 50%;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid-col-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 4rem;
+}
+
+h1,
+h3,
+h6{
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+    color: #0d0c22;
+}
+
+h1{
+    font-size: 5rem;
+}
+h3{
+    font-size: 2.5rem;
+}
+h6{
+    font-size: 1.4rem;
+}
+p{
+    line-height: 1.5;
+    font-size: 18px;
+    color: #6e6d7a;
+}
+
+img{
+    width: 100%;
+}
+
+.logo img{
+    width: 60px;
+    margin-right: .5rem;
+}
+
+a{
+    color: #333333;
+    text-transform: capitalize;
+}
+a.active{
+    font-weight: 600;
+}
+a:hover{
+    text-decoration: underline;
+}
+a i{
+    margin:  0 .5rem;
+}
+
+.btn{
+    text-transform: capitalize;
+    padding: .8rem 1.5rem;
+    display: inline-block;
+    margin-top: 1.5rem;
+}
+.btn-primary{
+    background-color: var(--pri-color);
+    color: #fff;
+}
+
+
+/* =============
+header section
+============= */
+section.header{
+    padding: 0;
+}
+section.header .container{
+    padding: 1rem 0;
+}
+section.header .container ul li{
+    margin: 0 1rem;
+}
+section.header .container .btn{
+    margin: 0;
+}
+section.header .container .btn-secondary{
+    background: #d69035;
+    color: #fff;
+}
+.menu{
+    display: none;
+}
+/* =====================
+xxxx header section xxxx
+===================== */
+
+
+/* =============
+hero section
+============= */
+section.hero{
+    position: relative;
+    padding: 4rem 0;
+}
+section.hero .pattern-one{
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 120px;
+    opacity: .2;
+    z-index: -1;
+}
+/* ====================
+xxxx hero section xxxx
+====================== */
+
+
+
+/* =============
+service section
+============= */
+section.service{
+    position: relative;
+}
+section.service::after{
+    position: absolute;
+    content: '';
+    top: 25px;
+    left: 0px;
+    width: 40%;
+    height: 80px;
+    background: #fff5e9;
+    z-index: -1;
+}
+section.service .container{
+    margin-bottom: 2rem;
+}
+section.service .swiper{
+    padding-top: 7rem;
+    transform: translateY(-7rem);
+}
+section.service .swiper .swiper-slide{
+    padding: 2rem;
+    border: var(--border);
+    transition: all .7s ease;
+}
+section.service .swiper .swiper-slide-active{
+    box-shadow: 0px 3px 12px rgba(0,0,0,.2);
+    background: #fff5e9;
+}
+section.service .swiper .swiper-slide-active p{
+    color: #2c2c2c;
+}
+section.service .swiper .swiper-slide i{
+    margin-bottom: 1.5rem;
+    font-size: 35px;
+    position: relative;
+}
+section.service .swiper .swiper-slide i::after{
+    position: absolute;
+    content: '';
+    left: -10px;
+    bottom: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--pri-color)50;
+    z-index: -1;
+}
+section.service .swiper .swiper-slide .btn{
+    background: #3e3e3e;
+    color: #fff;
+    transition: all .4s ease;
+}
+section.service .swiper .swiper-button-next{
+    top: 40px;
+    right: 7.5%;
+    width: 100px;
+}
+section.service .swiper .swiper-button-prev{
+    top: 40px;
+    left: 75%;
+    width: 100px;
+}
+section.service .swiper .swiper-button-prev::after{
+    content: url(../assets/pointer-left.svg);
+    width: 100%;
+}
+section.service .swiper .swiper-button-next::after{
+    content: url(../assets/pointer-right.svg);
+    width: 100%;
+}
+/* =====================
+xxxx service section xxxx
+===================== */
+
+
+
+
+/* =============
+know-how section
+============= */
+section.know-how{
+   position: relative;
+   background: #fff5e9;
+}
+section.know-how .line{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: var(--pri-color)70;
+}
+section.know-how .pattern-two{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    opacity: .7;
+    z-index: 1 ;
+}
+/* =======================
+xxxx know-how section xxxx
+========================= */
+
+
+
+/* =============
+project section
+============= */
+section.project .number{
+    margin: 2rem 0 1rem;
+}
+section.project .number h6{
+    padding: 1rem 2rem;
+    text-align: center;
+}
+section.project .number span{
+    font-weight: 400;
+    display: block;
+    margin-top: 1rem;
+}
+/* ======================
+xxxx project section xxxx
+====================== */
+
+
+
+
+/* =================
+testimonials section
+================== */
+section.testimonials{
+    position: relative;
+}
+section.testimonials::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
+    background-color: #fff5e9;
+    z-index: -1;
+}
+section.testimonials .swiper{
+    margin-top: 2rem;
+}
+section.testimonials .swiper-slide{
+    box-shadow: 0px 3px 8px rgba(0,0,0,.2);
+    background: #fff;
+    padding: 2rem;
+    opacity: .5;
+}
+section.testimonials .swiper-slide-active{
+    box-shadow: 0px 3px 8px rgba(0,0,0,.4);
+    opacity: 1;
+}
+section.testimonials .swiper{
+    padding-bottom: 5rem;
+}
+section.testimonials .swiper-button-next,
+section.testimonials .swiper-button-prev{
+    top: auto;
+    right: 10px;
+    bottom: 20px;
+    width: 100px;
+}
+section.testimonials .swiper-button-prev::after{
+    content: url(../assets/pointer-left.svg);
+    width: 100%;
+}
+section.testimonials .swiper-button-next::after{
+    content: url(../assets/pointer-right.svg);
+    width: 100%;
+}
+/* =======================
+xxxx testimonials section
+======================= */
+
+
+
+/* ===============
+subscribe section
+=============== */
+section.subscribe{
+    text-align: center;
+    margin: 4rem 0;
+    padding: 4rem 0;
+    background-color: #000;
+
+    position: relative;
+    z-index: 1;
+}
+section.subscribe .pattern{
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    z-index: -1;
+}
+section.subscribe .pattern-two{
+    position: absolute;
+    bottom: -90px;
+    right: -70px;
+    width: 250px;
+    height: 250px;
+    z-index: -1;
+}
+section.subscribe h3{
+    color: #fff;
+}
+section.subscribe .sub > div{
+    display: inline-block;
+    background-color: #fff;
+    padding: .5rem 1rem;
+    margin-top: 3rem;
+    border-radius: 20px;
+}
+section.subscribe input{
+    outline: none;
+    background: transparent;
+    margin-right: 1rem;
+    padding: .5rem;
+    border-radius: 16px;
+}
+section.subscribe span{
+    padding: .5rem;
+    border-radius: 16px;
+    background-color: var(--pri-color);
+    color: #fff;
+    text-transform: capitalize;
+}
+/* ========================
+xxxx subscribe section xxxx
+======================== */
+
+
+
+
+/* =============
+footer section
+============= */
+footer{
+    padding: 3rem 0;
+}
+footer .container{
+    align-items: flex-start;
+}
+footer .socials{
+    margin: 1rem 0;
+}
+footer .socials i{
+    margin-right: .5rem;
+    font-size: 20px;
+}
+footer .navigation p,
+footer .support p,
+footer .contact p{
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #0d0c22;
+    margin-bottom: .5rem;
+}
+footer .navigation li,
+footer .support li{
+    margin-bottom: .5rem;
+}
+footer .contact a{
+    display: block;
+    margin-bottom: 1rem;
+}
+/* =====================
+xxxx footer section xxxx
+===================== */
+
+
+/* ===============
+=======MEDIA QUERY
+================ */
+
+
+@media(max-width: 992px){
+    section.header .container ul li{
+        margin: 0 .5rem;
+    }
+
+    section.know-how .pattern-two{
+        width: 150px;
+    }
+}
+@media(max-width: 768px){
+    .grid-col-2{
+        grid-template-columns: 1fr;
+    }
+
+    .w-50{
+        width: 65%;
+    }
+
+    section.header{
+        position: relative;
+        overflow: visible;
+    }
+    section.header .container{
+        overflow: visible;
+    }
+    section.header nav{
+        transition: all .4s ease;
+    }
+    section.header nav{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 2rem;
+        border-top: var(--border);
+        border-bottom: var(--border);
+        background-color: #fff;
+        z-index: 10;
+    }
+    section.header nav.active{
+        top: 5rem;
+    }
+
+    .menu{
+        display: block;
+        width: 25px;
+        text-align: center;
+    }
+    .menu i{
+        font-size: 25px;
+    }
+
+    .hero-img{
+        display: none;
+    }
+
+    section.service .swiper .swiper-button-prev{
+        left: 65%;
+    }
+
+    section.know-how .know-how-img{
+        width: 80%;
+    }
+
+    .project-img{
+        display: none;
+    }
+
+
+    footer{
+        padding: 1rem;
+    }
+    footer .flex{
+        flex-direction: column;
+    }
+    footer .flex > div{
+        margin-top: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: var(--border);
+        width: 100%;
+    }
+
+}
+@media(max-width: 576px){
+    h1{
+        font-size: 4rem;
+    }
+    .container{
+        width: 90;
+    }
+    .w-50{
+        width: 100%;
+    }
+    section.service .swiper .swiper-button-next,
+    section.service .swiper .swiper-button-prev{
+        display: none;
+    }
+    .swiper{
+        padding: 0 1rem;
+    }
+
+
+}
