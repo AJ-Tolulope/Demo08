@@ -377,22 +377,30 @@ footer {
       font-size: var(--font-size---s);
     }
 
-    marquee {
-      div {
-        gap: 1.5rem;
-        transform: translateX(-100%);
+    .scroller {
+      gap: 1.5rem;
 
-        img {
-          width: 200px;
+      img {
+        width: 150px;
 
-          &:nth-child(odd) {
-            height: 200px;
-          }
-          &:nth-child(3n) {
-            height: 180px;
-          }
+        &:nth-child(odd) {
+          height: 160px;
+        }
+        &:nth-child(3n) {
+          height: 140px;
         }
       }
+    }
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
     }
   }
 

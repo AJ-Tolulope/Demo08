@@ -331,18 +331,28 @@ footer .social i {
   .hero-section h1 {
     font-size: var(--font-size---s);
   }
-  .hero-section marquee div {
+  .hero-section .scroller {
     gap: 1.5rem;
-    transform: translateX(-100%);
   }
-  .hero-section marquee div img {
-    width: 200px;
+  .hero-section .scroller img {
+    width: 150px;
   }
-  .hero-section marquee div img:nth-child(odd) {
-    height: 200px;
+  .hero-section .scroller img:nth-child(odd) {
+    height: 160px;
   }
-  .hero-section marquee div img:nth-child(3n) {
-    height: 180px;
+  .hero-section .scroller img:nth-child(3n) {
+    height: 140px;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
   .service-section .container {
     width: 85%;
